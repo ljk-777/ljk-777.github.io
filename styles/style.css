@@ -157,3 +157,78 @@ a:hover {
   font-size: 0.95rem;
   color: var(--muted);
 }
+.site-env {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 56px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.site-mark {
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  white-space: nowrap;
+}
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  margin-top: 10px;
+}
+.nav-links a {
+  border-bottom: none;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.nav-links a:hover {
+  color: var(--text);
+}
+.notes-preview {
+  position: relative;
+}
+
+.notes-list {
+  display: grid;
+  gap: 16px;
+}
+
+.note-item {
+  padding: 20px 18px;
+  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid rgba(92, 74, 60, 0.1);
+  border-radius: 18px;
+}
+
+.note-date {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.note-item h3 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.note-item p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .site-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .nav-links {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+}
