@@ -12,13 +12,6 @@ A buildless bilingual academic homepage with a brief biography, one submitted pa
 - `assets/monoheight-framework.png`: The user's supplied paper figure, displayed without cropping and linked to its full resolution.
 - `assets/bupt-logo.png`: The user's supplied university emblem, rendered from PDF for the education entry.
 
-Typography follows the supplied [Xiang Zhu homepage](https://canva4.github.io/): Times, 16px body text, 32px name, and 24px section headings. Chinese text uses a Song-style fallback. The default appearance is white; a moon/sun button toggles a dark appearance and remembers the choice. Photographs, the university emblem, and the paper figure retain their original colors.
-
-The display name is Jiakun Li in both languages. MonoHeight is explicitly marked IEEE TIP under review, not an accepted publication; its entry contains only the title, full user-supplied author list, venue, status, and figure. Jiakun Li is bold and underlined in the author list; no author-position label is displayed. There is no navigation bar, footer, project entry, personal-contribution paragraph, lifestyle section, or course bookmark. Language and theme controls occupy their own row above the portrait and never overlap it.
-
-The biography records the user-confirmed computer vision research advised by Zhonghong Ou at BUPT and remote AutoLab research advised by Zhipeng Zhang at SJTU. Advisor, university, and lab links remain clickable in both languages; public profiles verify the linked identities, not the user's private advising relationships.
-
-Research interests sit in a centered Research introduction below the biography, separate from the portrait layout. The MonoHeight entry beneath it retains the left-image, right-text layout on desktop.
 
 ## Local Preview
 
