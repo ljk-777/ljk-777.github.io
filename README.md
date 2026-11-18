@@ -1,7 +1,4 @@
 # Jiakun Li's Academic Homepage
-
-A buildless bilingual academic homepage with a brief biography, one submitted paper (MonoHeight), and education. The personal blog is maintained separately at [Marine Notes](https://marinenotes.me).
-
 ## Content
 
 - `index.html`: English biography, MonoHeight, education, and contact information.
@@ -21,6 +18,4 @@ No package installation or build is needed. All images are local. Language and t
 
 ## Hosting
 
-Published independently at [ljk-777.github.io](https://ljk-777.github.io/) using GitHub Pages with the `main` branch and repository root. There must be no `CNAME` file or custom-domain binding in this repository. The previous `marinenotes.me` Pages binding is removed with the user's approval; that domain remains a separate Vercel blog. Do not change the personal blog's DNS or Vercel configuration when editing this page.
-
-The reference sites' biographies, portraits, and publication images are not reused.
+Published independently at [ljk-777.github.io](https://ljk-777.github.io/) using GitHub Pages with the `main` branch and repository root. There must be no `CNAME` file or custom-domain binding in this repository. 
