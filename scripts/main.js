@@ -1,9 +1,11 @@
 (() => {
   const languageButton = document.querySelector("#language-toggle");
+  const themeButton = document.querySelector("#theme-toggle");
+  const pageTools = document.querySelector(".page-tools");
   const translatedNodes = [...document.querySelectorAll("[data-i18n]")];
   const english = new Map(translatedNodes.map((node) => [node, node.textContent]));
   const chinese = {
-    skip: "跳到正文", navAbout: "简介", navResearch: "研究", navEducation: "教育",
+    skip: "跳到正文",
     affiliation: "计算机科学与技术本科生 · 北京邮电大学",
     introStart: "我目前是",
     bupt: "北京邮电大学",
@@ -23,12 +25,18 @@
     educationDate: "2024.09 – 至今",
     degree: "计算机学院 · 计算机科学与技术专业本科生",
     educationDetails: "大二学年排名：5 / 359（前 1.39%） · 本科生优秀奖学金",
-    updated: "最近更新：2026 年 11 月",
-    backToTop: "返回顶部 ↑",
   };
 
   let language = "en";
   try { language = localStorage.getItem("marine-homepage-language") === "zh" ? "zh" : "en"; } catch { /* Preferences are optional. */ }
+
+  function updateThemeButton() {
+    const dark = document.documentElement.dataset.theme === "dark";
+    const label = language === "zh" ? (dark ? "切换到浅色模式" : "切换到夜间模式") : (dark ? "Switch to light mode" : "Switch to dark mode");
+    themeButton.setAttribute("aria-pressed", String(dark));
+    themeButton.setAttribute("aria-label", label);
+    themeButton.title = label;
+  }
 
   function setLanguage(nextLanguage) {
     language = nextLanguage;
@@ -38,12 +46,22 @@
     document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
     languageButton.textContent = language === "zh" ? "EN" : "中文";
     languageButton.setAttribute("aria-label", language === "zh" ? "Switch to English" : "切换到中文");
+    pageTools.setAttribute("aria-label", language === "zh" ? "页面偏好设置" : "Page preferences");
+    updateThemeButton();
   }
 
   languageButton.hidden = false;
+  themeButton.hidden = false;
   setLanguage(language);
   languageButton.addEventListener("click", () => {
     setLanguage(language === "en" ? "zh" : "en");
     try { localStorage.setItem("marine-homepage-language", language); } catch { /* Keep the page usable without storage. */ }
+  });
+  themeButton.addEventListener("click", () => {
+    const theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = theme;
+    document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#191c22" : "#ffffff";
+    updateThemeButton();
+    try { localStorage.setItem("marine-homepage-theme", theme); } catch { /* The current visit still supports theme switching. */ }
   });
 })();
