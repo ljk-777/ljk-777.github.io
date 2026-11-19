@@ -66,9 +66,11 @@ h3 { margin: 0 0 8px; font-size: 17px; font-weight: 700; line-height: 1.4; }
 .paper-authors strong { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .entry-copy .entry-status { font-size: 14px; }
 .entry-copy > :last-child { margin-bottom: 0; }
-.education-entry, .experience-entry { display: grid; grid-template-columns: 64px minmax(0, 1fr); align-items: center; gap: 22px; }
-.university-logo { display: block; width: 64px; height: 64px; object-fit: contain; border-radius: 50%; }
-.sjtu-logo { background: #ffffff; }
+.education-entry, .experience-entry { --emblem-size: 96px; display: grid; grid-template-columns: var(--emblem-size) minmax(0, 1fr); align-items: center; gap: 24px; }
+.university-emblem { display: grid; place-items: center; width: var(--emblem-size); height: var(--emblem-size); overflow: hidden; border-radius: 50%; background: #ffffff; }
+.university-logo { display: block; width: 87.5%; height: 87.5%; object-fit: contain; }
+/* Match visible seal diameters despite the SJTU asset's built-in clear space. */
+.sjtu-logo { width: 98.5%; height: 98.5%; transform: translateY(-.9%); }
 .education-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 5px 20px; flex-wrap: wrap; }
 .education-heading h3 { margin: 0; font-size: 16px; }
 .education-heading h3 a { color: var(--text); }
@@ -104,8 +106,8 @@ h3 { margin: 0 0 8px; font-size: 17px; font-weight: 700; line-height: 1.4; }
   .research-figure { width: min(100%, 280px); }
   .paper-figure { width: 100%; }
   .paper-figure figcaption { text-align: left; }
-  .education-entry, .experience-entry { grid-template-columns: 48px minmax(0, 1fr); align-items: start; gap: 15px; }
-  .university-logo { width: 48px; height: 48px; margin-top: 3px; }
+  .education-entry, .experience-entry { --emblem-size: 72px; align-items: start; gap: 18px; }
+  .university-emblem { margin-top: 3px; }
   .education-heading h3 { font-size: 16px; }
   .education-date { font-size: 13px; }
   .education-copy > p { font-size: 14px; }
@@ -115,6 +117,7 @@ h3 { margin: 0 0 8px; font-size: 17px; font-weight: 700; line-height: 1.4; }
   .page { padding-left: 18px; padding-right: 18px; }
   .introduction { grid-template-columns: minmax(0, 1fr) 84px; gap: 0 12px; }
   h1 { font-size: 28px; }
+  .education-entry, .experience-entry { --emblem-size: 64px; gap: 15px; }
 }
 @media (prefers-reduced-motion: reduce) {
   body { transition: none; }
