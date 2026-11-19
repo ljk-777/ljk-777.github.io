@@ -74,6 +74,13 @@ h3 { margin: 0 0 8px; font-size: 17px; font-weight: 700; line-height: 1.4; }
 .education-date { flex-shrink: 0; color: var(--muted); font-size: 14px; }
 .education-copy > p { margin: 5px 0 0; font-size: 15px; }
 .education-copy > .education-details { color: var(--muted); font-size: 14px; }
+.experience-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 5px 20px; }
+.experience-heading h3 { margin: 0; font-size: 16px; }
+.experience-period { flex-shrink: 0; color: var(--muted); font-size: 14px; }
+.experience-entry > p { margin: 6px 0 0; }
+.experience-role { color: var(--muted); font-size: 14px; }
+.experience-advisor { font-size: 14px; }
+.experience-description { max-width: 740px; }
 @media (max-width: 760px) {
   .page { padding: 21px 28px 54px; }
   .introduction { grid-template-columns: minmax(0, 1fr) 175px; gap: 27px; }

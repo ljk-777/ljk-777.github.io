@@ -9,9 +9,9 @@
     affiliation: "计算机科学与技术本科生 · 北京邮电大学",
     introStart: "我目前是",
     bupt: "北京邮电大学",
-    introVisionStart: "计算机科学与技术专业大三本科生，在",
-    advisorOu: "欧中洪教授",
-    introAutoLabStart: "指导下开展计算机视觉研究。目前也在",
+    introVisionStart: "计算机科学与技术专业大三本科生，与",
+    advisorGuoxin: "张国欣",
+    introAutoLabStart: "合作开展计算机视觉研究。目前也在",
     labUniversitySeparator: "（",
     sjtu: "上海交通大学",
     introAdvisor: "）担任远程科研助理，在",
@@ -25,6 +25,11 @@
     educationDate: "2024.09 – 至今",
     degree: "计算机学院 · 计算机科学与技术专业本科生",
     educationDetails: "大二学年排名：5 / 359（前 1.39%） · 本科生优秀奖学金",
+    experienceTitle: "科研实习",
+    experiencePeriod: "进行中",
+    experienceRole: "科研助理 · 远程",
+    experienceAdvisor: "指导老师：",
+    experienceDescription: "参与机器人上下文学习研究，关注策略适配以及跨任务、跨环境泛化。",
   };
 
   let language = "en";
